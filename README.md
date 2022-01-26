@@ -24,4 +24,6 @@ We provide this Ruby+Jekyll VM as an alternative for developers to be able to wo
 1. Update the `Vagrantfile` in the base path of the jekyll-vagrant folder, set the `PROJECT_SOURCE_IN_HOST` variable to the path where the Jekyll project (MoonshineWebsite) resides.
 1. Open a command line and change directory to the base path of this project.
 1. Execute the `vagrant up` command, once the process completes a Ruby+Jekyll virtual machine will be running.
-1. Execute the `run-moonshine.sh` utility script to build your site and start an HTTP server.
+1. Use the utility scripts to build your site and start an HTTP server:
+    1. If you are using Windows: Open a command line and execute the `run-moonshine.bat`  script.
+    1. If you are using Linux or macOS: Open a command line and execute the `run-moonshine.sh` script.

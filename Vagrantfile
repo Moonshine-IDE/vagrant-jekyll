@@ -24,8 +24,6 @@ Vagrant.configure(2) do |config|
      vb.memory = "1024"
    end
 
-  config.vbguest.auto_update = false
-
   config.vm.synced_folder PROJECT_SOURCE_IN_HOST, "/vagrant/jekyll-project/source"
 
   config.vm.network "forwarded_port", guest: 4000, host: 4000, host_ip: "127.0.0.1"

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-PROVISION_DIR=/vagrant/provision
-HOME_BIN_DIR=$HOME/bin
-
 installPackage()
 {
     local packages=$*
@@ -21,13 +18,6 @@ installPackages()
     installPackage zip unzip make software-properties-common
 }
 
-createAndMoveToHomeBinDir()
-{
-    echo "Creating and moving to bin directory"
-    mkdir $HOME_BIN_DIR
-    cd $HOME_BIN_DIR
-}
-
 installRuby()
 {
     version=$1
@@ -43,22 +33,9 @@ installRuby()
     gem install jekyll bundler
 }
 
-createBashrcAndBashProfile()
-{
-    echo "Update .bashrc and .bash_profile"
-    cat $PROVISION_DIR/bash_profile.template > $HOME/.bash_profile
-}
-
 provision() {
-    createAndMoveToHomeBinDir
-    createBashrcAndBashProfile
     installPackages
     installRuby $1
 }
 
-if [ ! -f "/var/vagrant_provision" ]; then
-    sudo touch /var/vagrant_provision
-    provision $1
-else
-    echo "Machine already provisioned. Run 'vagrant destroy' and 'vagrant up' to re-create."
-fi
+provision $1
