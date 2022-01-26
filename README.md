@@ -20,7 +20,7 @@ We provide this Ruby+Jekyll VM as an alternative for developers to be able to wo
 1. [Download](https://www.vagrantup.com/downloads) and install Vagrant.
 1. [Download](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and install Git.
 1. Using Git, [clone](https://git-scm.com/docs/git-clone) the [MoonshineIDE website repository](https://github.com/Moonshine-IDE/MoonshineWebsite).
-1. Using Git, [clone](https://git-scm.com/docs/git-clone) the [jekyll-vagrant repository](https://github.com/Moonshine-IDE/jekyll-vagrant).
+1. Using Git, [clone](https://git-scm.com/docs/git-clone) the [vagrant-jekyll repository](https://github.com/Moonshine-IDE/vagrant-jekyll) (this project).
 1. Update the `Vagrantfile` in the base path of the jekyll-vagrant folder, set the `PROJECT_SOURCE_IN_HOST` variable to the path where the Jekyll project (MoonshineWebsite) resides.
 1. Open a command line and change directory to the base path of this project.
 1. Execute the `vagrant up` command, once the process completes a Ruby+Jekyll virtual machine will be running.
