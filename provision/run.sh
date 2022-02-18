@@ -12,7 +12,7 @@ if [ "$IS_SASS_USED" = true ] ; then
 fi
 
 printf "\n\n\nStarting server...\n"
-bundle exec jekyll serve --host 0.0.0.0 --livereload --port 4000 --livereload-port 35729 --force_polling > jekyll_serve.log &!
+bundle exec jekyll serve --host 0.0.0.0 --livereload --port 4000 --livereload-port 35729 --force_polling > /vagrant/jekyll_serve.log &!
 
 sleep 20s
 printf "\n\n\nStatic website generated and running at 127.0.0.1:4000 ...\n"
